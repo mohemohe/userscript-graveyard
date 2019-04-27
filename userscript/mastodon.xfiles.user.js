@@ -24,11 +24,10 @@ window.addEventListener(
             start() {
                 this.mutationObserver.observe(
                     document
-                        .querySelector(".fa-home.column-header__icon") // Home Column Icon
-                        .closest("div.column") // Home Column
-                        .querySelector("div.item-list"),
+                        .querySelector("div.columns-area"),
                     {
-                        childList: true
+                        childList: true,
+                        subtree: true,
                     }
                 );
             }
